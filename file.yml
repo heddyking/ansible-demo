@@ -1,0 +1,10 @@
+- hosts: all
+  sudo: yes
+
+  tasks:
+
+     - copy: src=/home/ubuntu/test.yml dest=/home/ubuntu/test.yml
+       register: result
+     
+     - debug: msg="{{ result }}"
+

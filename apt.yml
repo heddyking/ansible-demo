@@ -1,0 +1,10 @@
+- hosts: all
+  sudo: yes
+
+  tasks:
+
+     - apt: name=nginx-core update_cache=yes
+       register: result
+     
+     - debug: msg="{{ result }}"
+

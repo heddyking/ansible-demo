@@ -1,0 +1,11 @@
+- hosts: all
+
+  tasks:
+
+     - shell: ls /home/ubuntu/
+       register: result
+       ignore_errors: True
+
+     - shell: echo "{{ result.start }}"
+
+     - debug: msg="{{ result }}"
